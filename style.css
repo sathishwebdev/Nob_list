@@ -50,9 +50,10 @@
   .loader {
     background-color:  #ffffff;
     border-radius: 50%;
-    border-top: 10px rgb(255, 255, 255) groove;
+    border-top: 10px rgba(255, 255, 255, 0 ) solid;
     border-left: 10px black dotted;
     border-bottom: 10px black dotted;
+    /* border-right: 10px black dotted; */
     width: 100px;
     height: 100px;
     -webkit-animation: spin 2s linear infinite; /* Safari */
