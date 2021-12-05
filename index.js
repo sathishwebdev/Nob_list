@@ -36,9 +36,9 @@ function share(en, author) {
       if (navigator.canShare) {
         navigator
           .share({
-            text: `${en} \n \n\n ~${author} \n `,
+            text: `${en}\n${author}\n\n\n `,
             url: "",
-            title: `Pro Quote | ${author}`,
+            title: `Noblers | ${author}`,
           })
           .then(() => console.log("Share was successful."))
           .catch((error) => alert("Sharing failed", error));
