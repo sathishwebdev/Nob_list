@@ -18,7 +18,7 @@ const display = (data=null) =>{
         let button = document.createElement('button')
         button.innerText="SHARE"
         laureates.map(({motivation, knownName})=>{
-         motive.innerHTML = `<p class="case">${motivation.en}<p style="text-align: right; font-size: small;"> ~ ${knownName.en} </p></p>`
+         motive.innerHTML = `<p class="case">${motivation.en}. <p style="text-align: right; font-size: small;"> ~ ${knownName.en} </p></p>`
        })
 
        button.setAttribute('class','btn')
