@@ -22,7 +22,7 @@ const display = (data=null) =>{
        })
 
        button.setAttribute('class','btn')
-    button.addEventListener('click', ()=>{share(`${awardYear}`, `${categoryFullName.en} - ${motive.innerHTML} `)})
+    button.addEventListener('click', ()=>{share(`${awardYear}`, `${categoryFullName.en} - ${motive.innerText} `)})
        
         div.append(p, motive, button)
         root.append(div)
