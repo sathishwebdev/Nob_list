@@ -18,11 +18,11 @@ const display = (data=null) =>{
         let button = document.createElement('button')
         button.innerText="SHARE"
         laureates.map(({motivation, knownName})=>{
-         motive.innerHTML = `<p class="case">${motivation.en}<p style="text-align: right; font-size: small;"> ~ ${knownName.en} </p></p>`
+         motive.innerHTML = `<p class="case">${motivation.en}. <p style="text-align: right; font-size: small;"> ~ ${knownName.en} </p></p>`
        })
 
        button.setAttribute('class','btn')
-    button.addEventListener('click', ()=>{share(`${awardYear}`, `${categoryFullName.en} - ${motive.value} `)})
+    button.addEventListener('click', ()=>{share(`${awardYear}`, `${categoryFullName.en} - ${motive.innerText} `)})
        
         div.append(p, motive, button)
         root.append(div)
@@ -36,9 +36,9 @@ function share(en, author) {
       if (navigator.canShare) {
         navigator
           .share({
-            text: `${en} \n \n\n ~${author} \n `,
+            text: `${en}\n${author}\n\n\n `,
             url: "",
-            title: `Pro Quote | ${author}`,
+            title: `Noblers | ${author}`,
           })
           .then(() => console.log("Share was successful."))
           .catch((error) => alert("Sharing failed", error));
